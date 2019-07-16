@@ -103,3 +103,17 @@ for cname in cmocean.cm.cmapnames:
     curl
     diff
     tarn
+
+
+## Add to correct *ncWMS2* path
+
+According to the *ncWMS2* documentation:
+
+> The palette files can be placed in a directory named .palettes within the main config directory (i.e. ~/.ncWMS2/.palettes/ by default) and will be picked up automatically after a server restart.
+
+Although they can be placed in other locations with [additional configuration.](https://reading-escience-centre.gitbooks.io/ncwms-user-guide/content/06-development.html#palettes)
+
+```bash
+# Copy generated colormap files to ncWMS2 palette path
+cp cmo*.pal /path/to/.ncWMS2/.palettes/
+```
